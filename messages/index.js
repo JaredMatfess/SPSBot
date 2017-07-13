@@ -34,8 +34,8 @@ bot.dialog('/', [
 bot.dialog('PasswordReset', [
     function (session, args, next) {
         var answer = intentAnswers['Password Reset'];
-        builder.Prompts.text("Password reset?");
         session.send(answer);
+        builder.Prompts.text("Password reset?");
 
     }
 ]).triggerAction({
