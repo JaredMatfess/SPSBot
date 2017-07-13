@@ -1,0 +1,26 @@
+{
+  "name": "spsbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "botbuilder": "^3.7.0",
+    "botbuilder-azure": "3.0.2"
+  },
+  "devDependencies": {
+    "restify": "^4.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jared D. Matfess",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaredMatfess/SPSBot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JaredMatfess/SPSBot/issues"
+  },
+  "homepage": "https://github.com/JaredMatfess/SPSBot#readme",
+  "description": ""
+}
