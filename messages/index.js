@@ -31,7 +31,7 @@ bot.dialog('/', [
 ]);
 
 
-bot.dialog('PasswordReset', [
+bot.dialog('Password Reset', [
     function (session, args, next) {
         var answer = intentAnswers['Password Reset'];
         session.send(answer);
