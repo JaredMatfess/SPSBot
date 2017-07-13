@@ -22,6 +22,7 @@ var bot = new builder.UniversalBot(connector);
 bot.localePath(path.join(__dirname, './locale'));
 
 var recognizer = new builder.LuisRecognizer(process.env.LUIS_MODEL_URL);
+
 bot.recognizer(recognizer);
 
 bot.dialog('/', [
@@ -31,16 +32,9 @@ bot.dialog('/', [
 ]);
 
 
-bot.dialog('Password Reset', [
-    function (session, args, next) {
-        var answer = intentAnswers['Password Reset'];
-        session.send(answer);
-        builder.Prompts.text("Password reset?");
-
-    }
-]).triggerAction({
-    matches: 'Password Reset'
-});
+bot.dialog('Password Reset', function (session) {
+    session.endDialog("This bot will echo back anything you say. Say 'goodbye' to quit.");
+}).triggerAction({ matches: 'Password Reset' });
 
 if (useEmulator) {
     var restify = require('restify');
